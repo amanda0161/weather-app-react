@@ -11,4 +11,14 @@ export default function Weather(props) {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}}&appid=${apiKey}&units=metric`;
 
   axios.get(url).then(handleResponse);
+
+  return (
+    <Loader
+      type="Puff"
+      color="orange"
+      height={100}
+      width={100}
+      timeout={3000}
+    />
+  );
 }
