@@ -5,7 +5,6 @@ export default function Weather() {
   let weatherData = {
     city: "Manchester",
     temperature: 19,
-    date: "Tuesday 10:00",
     description: "Sunny",
     imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     humidity: 80,
@@ -39,7 +38,6 @@ export default function Weather() {
         <div className="row">
           <div className="col-8">
             <ul>
-              <li>{weatherData.date}</li>
               <li>{weatherData.description}</li>
               <li>Humidity: {weatherData.humidity}%</li>
               <li>Wind: {weatherData.wind} km/h</li>
