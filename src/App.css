@@ -1,24 +1,7 @@
-body {
-  font-family: "Poppins", sans-serif;
-  background: #8594e4;
-  background-attachment: fixed;
-}
-
-.container {
-  background: rgb(212, 222, 245);
-  display: block;
-  margin: 0 auto;
-  max-width: 800px;
-  border-radius: 15px;
-  padding: 50px 30px 70px;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
+.App {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  margin: 70px;
 }
 
 li {
@@ -32,4 +15,9 @@ li {
 
 li:first-letter {
   text-transform: capitalize;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }

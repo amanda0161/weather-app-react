@@ -1,6 +1,6 @@
 import React from "react";
-import axios from "axios";
 import "./Weather.css";
+import axios from "axios";
 
 export default function Weather() {
   let weatherData = {
@@ -14,53 +14,70 @@ export default function Weather() {
   };
 
   return (
-    <div className="Weather">
-      <form className="mb-3">
+    <div>
+      <div className="Weather weather-app-wrapper">
         <div className="row">
-          <div className="col-9">
-            <input
-              type="search"
-              placeholder="Type a city.."
-              className="form-control"
-              autoComplete="off"
-            />
+          <div className="col-8">
+            <form className="mb-3">
+              <div className="form-group">
+                <input
+                  type="search"
+                  placeholder="Enter a city"
+                  className="form-control"
+                  autoComplete="off"
+                />
+              </div>
+            </form>
           </div>
-          <div className="col-3">
-            <input type="submit" value="Search" className="search-button" />
+          <div className="col-4">
+            <button type="submit" value="Search" className="search-button">
+              Search
+            </button>
           </div>
         </div>
-      </form>
-
-      <div className="overview">
         <h1 className="current-city">{weatherData.city}</h1>
-        <ul>
-          <li>{weatherData.date}</li>
-          <li>{weatherData.description}</li>
-        </ul>
-      </div>
-      <div className="row">
-        <div className="col-6">
-          <div className="clearfix weather-temperature">
-            <img
-              src={weatherData.imgUrl}
-              alt={weatherData.description}
-              className="float-left"
-            />
-            <div className="float-left">
-              <strong>{weatherData.temperature}</strong>
-              <span className="units">
-                <a href="/">°C</a> | <a href="/">°F</a>
-              </span>
+        <br />
+        <div className="row">
+          <div className="col-8">
+            <ul>
+              <li>{weatherData.date}</li>
+              <li>{weatherData.description}</li>
+              <li>Humidity: {weatherData.humidity}%</li>
+              <li>Wind: {weatherData.wind} km/h</li>
+            </ul>
+          </div>
+
+          <div className="col-4">
+            <div className="weather-temperature">
+              <strong>{weatherData.temperature}°C</strong>
+              <img
+                src={weatherData.imgUrl}
+                alt={weatherData.description}
+                className="float-left"
+              />
             </div>
           </div>
         </div>
-        <div className="col-6">
-          <ul>
-            <li>Humidity: {weatherData.humidity}%</li>
-            <li>Wind: {weatherData.wind} km/h</li>
-          </ul>
-        </div>
       </div>
+
+      <small>
+        This project is{" "}
+        <a
+          href="https://github.com/amanda0161/weather-app-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          open-sourced
+        </a>{" "}
+        and was coded by 📸{" "}
+        <a
+          href="https://www.urbexadventure.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Amanda Charlesworth
+        </a>
+      </small>
     </div>
   );
 }
