@@ -3,49 +3,15 @@ body {
   background-attachment: fixed;
 }
 
-.current-city {
-  font-family: monospace;
-  font-weight: 700;
-  font-size: 80px;
-  margin: 30px 0 30px 0;
-  text-align: left;
-  line-height: 20px;
-}
-
-ul {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  list-style-type: none;
-  text-align: left;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-small {
-  font-size: 14px;
-}
-
-a {
-  text-decoration: none;
-  color: #d946b5;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .weather-app-wrapper {
   background: rgb(212, 222, 245);
   display: block;
   margin: 0 auto;
   max-width: 800px;
   border-radius: 15px;
-  padding: 50px 30px 70px;
+  padding: 50px 30px 50px;
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -62,31 +28,57 @@ a:hover {
   color: black;
 }
 
-.search-text,
-.search-button,
-.search-city,
-.form-control {
-  padding: 10px 30px;
-  border-radius: 10px;
-  border: 1px solid grey;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  margin: 10px 5px;
+.form-group {
+  display: flex;
 }
 
-.weather-temperature img {
+h1 {
+  font-size: 80px;
+  font-family: monospace;
+  font-weight: 700;
+  margin: 50px 0px 50px 0;
+  text-align: left;
+  line-height: 20px;
+  padding-left: 10px;
+}
+
+p {
+  text-align: left;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 20px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  list-style-type: none;
+  text-align: left;
+}
+
+.weather-temperature,
+.weatherIcon {
   height: 50px;
   width: 50px;
-  margin-top: 4px;
-  margin-left: 10px;
   vertical-align: top;
   padding: 0px;
-  display: inline-block;
-}
-.weather-temperature strong {
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 700;
-  display: inline-block;
+  display: inline-flex;
 }
 
 .units {
@@ -116,4 +108,15 @@ a:hover {
   height: auto;
   line-height: 15px;
   white-space: nowrap;
+}
+
+.search-text,
+.search-button,
+.search-city,
+.form-control {
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 10px 5px;
 }
