@@ -100,7 +100,13 @@ ul {
   font-weight: 400;
   vertical-align: top;
 }
-
 .Weather canvas {
   margin: 10px auto;
+}
+.flex {
+  display: flex;
+}
+
+.flex__col {
+  flex: 1;
 }
