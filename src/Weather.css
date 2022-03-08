@@ -96,17 +96,19 @@ ul {
 .Weather .temperature {
   font-weight: bold;
   font-size: 64px;
-  line-height: 64px;
+  line-height: 90px;
   font-weight: 400;
   vertical-align: top;
 }
 .Weather canvas {
-  margin: 10px auto;
+  margin: 10px;
 }
 .flex {
   display: flex;
+  margin-top: 20px;
 }
 
 .flex__col {
-  flex: 1;
+  flex: 1 1;
+  display: flex;
 }
